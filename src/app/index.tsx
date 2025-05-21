@@ -1,16 +1,14 @@
-import { View, Text } from "react-native"
+import { Loading } from "@/components/loading"
+import Logo from "@/components/logo"
+import { View} from "react-native"
 
 export default function Index(){
     return (
         <View
-            style={{
-                flex:1 ,
-                justifyContent: "center",
-                alignItems: "center",
-
-            }}
+            style={{flex: 1, padding:40, gap:10 }}
         >
-            <Text> Aqui na Feira - App </Text>
+            <Logo/>
+            <Loading/>
         </View>
     )
 } 
