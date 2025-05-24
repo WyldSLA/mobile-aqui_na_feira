@@ -1,6 +1,3 @@
-import { Stack } from "expo-router"
-import { colors } from "@/styles/theme"
-
 import {
     useFonts,
     Lexend_600SemiBold,
@@ -10,6 +7,7 @@ import {
 } from "@expo-google-fonts/lexend"
 
 import { Loading } from "@/components/loading"
+import NavigationBar from "@/components/navigation bar"
 
 export default function Layout(){
     const [fontsLoaded] = useFonts({
@@ -24,11 +22,6 @@ export default function Layout(){
     }
 
     return (
-        <Stack 
-            screenOptions={{ 
-                headerShown: false,
-                contentStyle: { backgroundColor: colors.terracota.base },
-            }}
-        />
+        <NavigationBar />
     )
 }
