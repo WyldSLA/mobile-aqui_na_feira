@@ -26,10 +26,10 @@ export default function NavigationBar(){
             component={Home}
             options={{
                 tabBarIcon: ({focused}) => (
-                    <View style={focused ? s.focusedTab : s.tab}>
+                    <View style={s.tab}>
                         <View style={focused ? s.iconFocusedContainer: s.iconContainer }>
-                        <Ionicons name="home" size={24} color={focused ? "#fff" : "#A84D28"}/>
-                        </View>
+                            <Ionicons name="home" size={24} color={focused ? "#fff" : "#A84D28"}/>
+                        </View> 
                         <Text style={[s.label, focused && s.focusedLabel]}> Home </Text>
                     </View>
                 ),
@@ -41,7 +41,7 @@ export default function NavigationBar(){
             component={Favoritos}
             options={{
                 tabBarIcon: ({focused}) => (
-                    <View style={focused ? s.focusedTab : s.tab}>
+                    <View style={s.tab}>
                         <View style={focused ? s.iconFocusedContainer: s.iconContainer }>
                             <Ionicons name="heart-outline" size={24} color={focused ? "#fff" : "#A84D28"}/>
                         </View>
@@ -56,7 +56,7 @@ export default function NavigationBar(){
             component={Notificacao}
             options={{
                 tabBarIcon: ({focused}) => (
-                    <View style={focused ? s.focusedTab : s.tab}>
+                    <View style={s.tab}>
                         <View style={focused ? s.iconFocusedContainer: s.iconContainer }>
                             <Ionicons name="notifications-outline" size={24} color={focused ? "#fff" : "#A84D28"}/>
                         </View>
@@ -71,7 +71,7 @@ export default function NavigationBar(){
             component={Perfil}
             options={{
                 tabBarIcon: ({focused}) => (
-                    <View style={focused ? s.focusedTab : s.tab}>
+                    <View style={s.tab}>
                         <View style={focused ? s.iconFocusedContainer: s.iconContainer }>
                             <Ionicons name="person-outline" size={24} color={focused ? "#fff" : "#A84D28"}/>
                         </View>

@@ -4,54 +4,57 @@ import { colors, fontFamily } from "@/styles/theme"
 export const s = StyleSheet.create({
     tabBar: {
         position: "absolute",
-        bottom: 20,
-        left: 20,
-        right: 20,
-        borderRadius: 50,
+        bottom: 42,
+        left: 25,
+        right: 25,
+        borderRadius: 999,
         backgroundColor: colors.white.base,
-        height: 90,
+        paddingHorizontal: 10,
+        paddingVertical: 10,
+        elevation: 5,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-evenly",
+        textAlign: "center",
         shadowColor: colors.black.base,
         shadowOpacity: 0.1,
-        shadowRadius: 10,
-        elevation: 10,
-        flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center"
+        shadowRadius: 10
     },
     tab: {
         alignItems: "center",
         justifyContent: "center",
-        width: 70
-    },
-    focusedTab: {
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: colors.terracota.base,
-        width: 70
+        width: 80,
+        height: 80,
+        marginTop: 24
     },
     iconContainer: {
         width: 50,
         height: 50,
-        backgroundColor: colors.white.base,
-        borderRadius: 999,
-        padding: 10,
+        borderRadius: 25,
         borderWidth: 1,
-        borderColor: colors.terracota.base,
+        borderColor: "rgba(0, 0, 0, 0.2)",
+        backgroundColor: colors.white.base,
+        alignItems: "center",
+        justifyContent: "center"
     },
     iconFocusedContainer: {
         width: 50,
         height: 50,
+        borderRadius: 25,
         backgroundColor: colors.terracota.base,
-        borderRadius: 999,
-        padding: 10,
+        alignItems: "center",
+        justifyContent: "center"
     },
     label: {
         fontSize: 12,
-        fontFamily: fontFamily.regular,
-        color: colors.terracota.base,
-        marginTop: 4
+        color: "rgba(0, 0, 0, 0.8)",
+        marginTop: 6,
+        fontFamily: fontFamily.medium,
+        textAlign: "center",
+        maxWidth: 80
     },
     focusedLabel: {
-        color: colors.black.base
+        color: colors.terracota.base,
+
     }
 })
