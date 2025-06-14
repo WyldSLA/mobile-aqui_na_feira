@@ -4,18 +4,16 @@ import { colors, fontFamily } from "@/styles/theme"
 export const s = StyleSheet.create({
     tabBar: {
         position: "absolute",
+        alignSelf: "center",
         bottom: 42,
-        left: 25,
-        right: 25,
-        borderRadius: 999,
+        borderRadius: 10,
         backgroundColor: colors.white.base,
         paddingHorizontal: 10,
-        paddingVertical: 10,
+        paddingVertical: 6,
         elevation: 5,
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-evenly",
-        textAlign: "center",
         shadowColor: colors.black.base,
         shadowOpacity: 0.1,
         shadowRadius: 10
@@ -25,14 +23,14 @@ export const s = StyleSheet.create({
         justifyContent: "center",
         width: 80,
         height: 80,
-        marginTop: 24
+        marginTop: 22,
     },
     iconContainer: {
         width: 50,
         height: 50,
         borderRadius: 25,
         borderWidth: 1,
-        borderColor: "rgba(0, 0, 0, 0.2)",
+        borderColor: "rgba(0, 0, 0, 0.30)",
         backgroundColor: colors.white.base,
         alignItems: "center",
         justifyContent: "center"
@@ -41,9 +39,9 @@ export const s = StyleSheet.create({
         width: 50,
         height: 50,
         borderRadius: 25,
-        backgroundColor: colors.terracota.base,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        overflow: "hidden"
     },
     label: {
         fontSize: 12,

@@ -4,10 +4,12 @@ import {
     Lexend_400Regular,
     Lexend_500Medium,
     Lexend_700Bold
-} from "@expo-google-fonts/lexend"
+} from "@expo-google-fonts/lexend";
 
-import { Loading } from "@/components/loading"
-import NavigationBar from "@/components/navigation bar"
+import { Loading } from "@/components/loading";
+import NavigationBar from "@/components/navigation bar";
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 
 export default function Layout(){
     const [fontsLoaded] = useFonts({
@@ -22,6 +24,11 @@ export default function Layout(){
     }
 
     return (
-        <NavigationBar />
+        
+        <GestureHandlerRootView style={{flex: 1}}>
+            <BottomSheetModalProvider>
+                <NavigationBar />
+            </BottomSheetModalProvider>
+        </GestureHandlerRootView>
     )
 }
