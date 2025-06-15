@@ -3,18 +3,33 @@ import { colors, fontFamily } from "@/styles/theme";
 
 export const s = StyleSheet.create({
     container: {
+        width: "auto",
         height: 56,
-        maxHeight: 56,
-        backgroundColor: colors.white.base,
-        borderRadius: 10,
-        alignItems: "center",
-        justifyContent:"center",
         flexDirection: "row",
-        marginBottom: 80
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: colors.terracota.base,
+        paddingHorizontal: 16,
+        paddingVertical: 12,
+        borderRadius: 32,
+        gap: 12,
+        elevation: 3,
+        shadowColor: colors.terracota.light,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 6,
     },
     title: {
-        color:colors.terracota.base,
         fontFamily:fontFamily.semiBold,
-        fontSize: 16
+        fontSize: 16,
+        color: colors.white.base
+    },
+    circle: {
+        paddingHorizontal: 0,
+        paddingVertical: 0,
+        width: 50,
+        height: 50,
+        justifyContent: "center",
+        alignItems: "center"
     }
 })

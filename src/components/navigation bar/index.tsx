@@ -1,7 +1,7 @@
 import { s } from "./style";
-import { Ionicons } from "@expo/vector-icons";
+import { Home as HomeIcon, Heart, Bell, User } from "lucide-react-native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient'; 
 import { colors } from "@/styles/theme";
 
@@ -19,6 +19,10 @@ export default function NavigationBar() {
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: s.tabBar,
+        tabBarItemStyle: {
+          justifyContent: "center",
+          alignItems: "center"
+        }
       }}
     >
       <Tabs.Screen
@@ -34,11 +38,11 @@ export default function NavigationBar() {
                   end={{ x: 1, y: 1 }}
                   style={s.iconFocusedContainer}
                 >
-                  <Ionicons name="home" size={24} color="#fff" />
+                  <HomeIcon size={24} color={colors.white.base}/>
                 </LinearGradient>
               ) : (
                 <View style={s.iconContainer}>
-                  <Ionicons name="home" size={24} color={colors.terracota.base} />
+                  <HomeIcon size={24} color={colors.terracota.base}/>
                 </View>
               )}
               <Text style={[s.label, focused && s.focusedLabel]}>Home</Text>
@@ -60,11 +64,11 @@ export default function NavigationBar() {
                   end={{ x: 1, y: 1 }}
                   style={s.iconFocusedContainer}
                 >
-                  <Ionicons name="heart-outline" size={24} color="#fff" />
+                  <Heart size={24} color={colors.white.base}/>
                 </LinearGradient>
               ) : (
                 <View style={s.iconContainer}>
-                  <Ionicons name="heart-outline" size={24} color={colors.terracota.base} />
+                  <Heart size={24} color={colors.terracota.base}/>
                 </View>
               )}
               <Text style={[s.label, focused && s.focusedLabel]}>Favoritos</Text>
@@ -86,11 +90,11 @@ export default function NavigationBar() {
                   end={{ x: 1, y: 1 }}
                   style={s.iconFocusedContainer}
                 >
-                  <Ionicons name="notifications-outline" size={24} color="#fff" />
+                  <Bell size={24} color={colors.white.base}/>
                 </LinearGradient>
               ) : (
                 <View style={s.iconContainer}>
-                  <Ionicons name="notifications-outline" size={24} color={colors.terracota.base} />
+                  <Bell size={24} color={colors.terracota.base}/>
                 </View>
               )}
               <Text style={[s.label, focused && s.focusedLabel]}>Notificação</Text>
@@ -112,11 +116,11 @@ export default function NavigationBar() {
                   end={{ x: 1, y: 1 }}
                   style={s.iconFocusedContainer}
                 >
-                  <Ionicons name="person-outline" size={24} color="#fff" />
+                  <User size={24} color={colors.white.base}/>
                 </LinearGradient>
               ) : (
                 <View style={s.iconContainer}>
-                  <Ionicons name="person-outline" size={24} color={colors.terracota.base} />
+                  <User size={24} color={colors.terracota.base}/>
                 </View>
               )}
               <Text style={[s.label, focused && s.focusedLabel]}>Perfil</Text>

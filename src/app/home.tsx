@@ -57,7 +57,6 @@ export default function Home() {
     try {
       const { data } = await api.get(`/banco/info-banco/${id}`);
       setBancoSelecionado(data);
-      console.log(data)
       bottomSheetRef.current?.open();
     } catch (error) {
       console.log(error);
